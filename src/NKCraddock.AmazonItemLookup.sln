@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKCraddock.AmazonItemLookup", "NKCraddock.AmazonItemLookup\NKCraddock.AmazonItemLookup.csproj", "{7A32E179-873E-4611-88A7-A381019C1147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKCraddock.AmazonItemLookupTests", "NKCraddock.AmazonItemLookupTests\NKCraddock.AmazonItemLookupTests.csproj", "{EF947201-9E89-4F9C-8C5A-2381AAEEB59A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4427A094-F084-4C42-87A6-8B6CD0BF556D}"
+	ProjectSection(SolutionItems) = preProject
+		..\readme.md = ..\readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A32E179-873E-4611-88A7-A381019C1147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A32E179-873E-4611-88A7-A381019C1147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A32E179-873E-4611-88A7-A381019C1147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A32E179-873E-4611-88A7-A381019C1147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF947201-9E89-4F9C-8C5A-2381AAEEB59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF947201-9E89-4F9C-8C5A-2381AAEEB59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF947201-9E89-4F9C-8C5A-2381AAEEB59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF947201-9E89-4F9C-8C5A-2381AAEEB59A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
