@@ -29,12 +29,15 @@ namespace NKCraddock.AmazonItemLookup
 
         public string ReviewIFrameUrl { get; set; }
 
-        public AwsReview AmazonReview
+        public string Description
         {
             get
             {
-                const string AMAZON_SOURCE_NAME = "Amazon.com Review";
-                return Reviews.Where(x => x.Source == AMAZON_SOURCE_NAME).FirstOrDefault();
+                const string AMAZON_SOURCE_NAME = "Product Description";
+                AwsReview description = Reviews.Where(x => x.Source == AMAZON_SOURCE_NAME).FirstOrDefault();
+                if (description == null)
+                    return String.Empty;
+                return description.Content;
             }
         }
 
