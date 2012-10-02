@@ -33,7 +33,7 @@ namespace NKCraddock.AmazonItemLookup.Client
 
             string requestUrl = SignRequest(args);
 
-            string responseText = GetResponse(requestUrl);
+            string responseText = communicator.GetResponseFromUrl(requestUrl);
 
             var itemLookupResponse = new AwsItemLookupResponse(responseText);
 
@@ -55,11 +55,6 @@ namespace NKCraddock.AmazonItemLookup.Client
         {
             var signer = new SignedRequestHelper(connectionInfo.AWSAccessKey, connectionInfo.AWSSecretKey, AWS_DESTINATION);
             return signer.Sign(requestArgs);
-        }
-
-        protected virtual string GetResponse(string requestUrl)
-        {
-            return communicator.GetResponseFromUrl(requestUrl);
         }
     }
 }
