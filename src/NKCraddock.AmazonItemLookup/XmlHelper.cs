@@ -18,6 +18,9 @@ namespace NKCraddock.AmazonItemLookup
 
         public static double? GetDollars(XmlNode node)
         {
+            if (node == null)
+                return null;
+
             double cents = 0;
             if (double.TryParse(node.Value ?? node.InnerText, out cents))
                 return cents / 100;
