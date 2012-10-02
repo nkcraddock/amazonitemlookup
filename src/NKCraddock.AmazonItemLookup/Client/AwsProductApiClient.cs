@@ -16,10 +16,14 @@ namespace NKCraddock.AmazonItemLookup.Client
         const string AWS_DESTINATION = "ecs.amazonaws.com";
 
         ProductApiConnectionInfo connectionInfo;
+        ICommunicator communicator;
 
-        public AwsProductApiClient(ProductApiConnectionInfo connectionInfo)
+        public AwsProductApiClient(ProductApiConnectionInfo connectionInfo) : this(connectionInfo, new HttpCommunicator()) { }
+
+        public AwsProductApiClient(ProductApiConnectionInfo connectionInfo, ICommunicator communicator)
         {
             this.connectionInfo = connectionInfo;
+            this.communicator = communicator;
         }
 
         public AwsItem LookupByAsin(string asin)
@@ -47,20 +51,15 @@ namespace NKCraddock.AmazonItemLookup.Client
             return requestArgs;
         }
 
-        private string SignRequest(Dictionary<string, String> requestArgs)
+        protected virtual string SignRequest(Dictionary<string, String> requestArgs)
         {
             var signer = new SignedRequestHelper(connectionInfo.AWSAccessKey, connectionInfo.AWSSecretKey, AWS_DESTINATION);
             return signer.Sign(requestArgs);
         }
 
-        private string GetResponse(string requestUrl)
+        protected virtual string GetResponse(string requestUrl)
         {
-            var request = WebRequest.Create(requestUrl);
-            var response = (HttpWebResponse)request.GetResponse();
-            using (var sr = new StreamReader(response.GetResponseStream()))
-            {
-                return sr.ReadToEnd();
-            }
+            return communicator.GetResponseFromUrl(requestUrl);
         }
     }
 }

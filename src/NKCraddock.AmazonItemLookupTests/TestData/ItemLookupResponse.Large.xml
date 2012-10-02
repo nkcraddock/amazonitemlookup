@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" ?>
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <RequestId>909b16e3-feb5-4a10-bf34-f59c92553e31</RequestId>
+    <Arguments>
+      <Argument Name="Operation" Value="ItemLookup"></Argument>
+      <Argument Name="Service" Value="AWSECommerceService"></Argument>
+      <Argument Name="Signature" Value="DOESNTMATTER"></Argument>
+      <Argument Name="AssociateTag" Value="DOESNTMATTER"></Argument>
+      <Argument Name="Version" Value="2009-03-31"></Argument>
+      <Argument Name="ItemId" Value="0131103628"></Argument>
+      <Argument Name="AWSAccessKeyId" Value="DOESNTMATTER"></Argument>
+      <Argument Name="Timestamp" Value="2012-09-20T04:04:24Z"></Argument>
+      <Argument Name="ResponseGroup" Value="Large"></Argument>
+    </Arguments>
+    <RequestProcessingTime>0.0369380000000000</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemLookupRequest>
+        <IdType>ASIN</IdType>
+        <ItemId>0131103628</ItemId>
+        <ResponseGroup>Large</ResponseGroup>
+        <VariationPage>All</VariationPage>
+      </ItemLookupRequest>
+    </Request>
+    <Item>
+      <ASIN>0131103628</ASIN>
+      <DetailPageURL>http://www.amazon.com/C-Programming-Language-2nd-Edition/dp/0131103628%3FSubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0131103628</DetailPageURL>
+      <ItemLinks>
+        <ItemLink>
+          <Description>Technical Details</Description>
+          <URL>http://www.amazon.com/C-Programming-Language-2nd-Edition/dp/tech-data/0131103628%3FSubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Baby Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0131103628%26SubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wedding Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0131103628%26SubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wishlist</Description>
+          <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0131103628%26SubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Tell A Friend</Description>
+          <URL>http://www.amazon.com/gp/pdp/taf/0131103628%3FSubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Customer Reviews</Description>
+          <URL>http://www.amazon.com/review/product/0131103628%3FSubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Offers</Description>
+          <URL>http://www.amazon.com/gp/offer-listing/0131103628%3FSubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</URL>
+        </ItemLink>
+      </ItemLinks>
+      <SalesRank>1888</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL75_.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">57</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL160_.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">121</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL.jpg</URL>
+        <Height Units="pixels">420</Height>
+        <Width Units="pixels">318</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL30_.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">23</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">57</Width>
+          </SmallImage>
+          <ThumbnailImage>
+            <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">57</Width>
+          </ThumbnailImage>
+          <TinyImage>
+            <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL110_.jpg</URL>
+            <Height Units="pixels">110</Height>
+            <Width Units="pixels">83</Width>
+          </TinyImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL._SL160_.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">121</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/41G0l2eBPNL.jpg</URL>
+            <Height Units="pixels">420</Height>
+            <Width Units="pixels">318</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Brian W. Kernighan</Author>
+        <Author>Dennis M. Ritchie</Author>
+        <Binding>Paperback</Binding>
+        <EAN>9780131103627</EAN>
+        <EANList>
+          <EANListElement>0076092003106</EANListElement>
+          <EANListElement>9780131103627</EANListElement>
+        </EANList>
+        <Edition>2</Edition>
+        <ISBN>0131103628</ISBN>
+        <IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+        <ItemDimensions>
+          <Height Units="hundredths-inches">2276</Height>
+          <Length Units="hundredths-inches">701</Length>
+          <Weight Units="hundredths-pounds">102</Weight>
+          <Width Units="hundredths-inches">59</Width>
+        </ItemDimensions>
+        <Label>Prentice Hall</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Unknown</Type>
+          </Language>
+          <Language>
+            <Name>German</Name>
+            <Type>Original Language</Type>
+          </Language>
+          <Language>
+            <Name>English</Name>
+            <Type>Published</Type>
+          </Language>
+        </Languages>
+        <ListPrice>
+          <Amount>6700</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$67.00</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Prentice Hall</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>274</NumberOfPages>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">70</Height>
+          <Length Units="hundredths-inches">910</Length>
+          <Weight Units="hundredths-pounds">105</Weight>
+          <Width Units="hundredths-inches">690</Width>
+        </PackageDimensions>
+        <PackageQuantity>1</PackageQuantity>
+        <ProductGroup>Book</ProductGroup>
+        <ProductTypeName>ABIS_BOOK</ProductTypeName>
+        <PublicationDate>1988-04-01</PublicationDate>
+        <Publisher>Prentice Hall</Publisher>
+        <SKU>GH05-7279_0131103628</SKU>
+        <Studio>Prentice Hall</Studio>
+        <Title>C Programming Language (2nd Edition)</Title>
+        <TradeInValue>
+          <Amount>2425</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$24.25</FormattedPrice>
+        </TradeInValue>
+        <UPC>076092003106</UPC>
+        <UPCList>
+          <UPCListElement>076092003106</UPCListElement>
+        </UPCList>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>4246</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$42.46</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>2499</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$24.99</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>62</TotalNew>
+        <TotalUsed>95</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <MoreOffersUrl>http://www.amazon.com/gp/offer-listing/0131103628%3FSubscriptionId%3DAKIAIZ4K6CQUSMXHVYUQ%26tag%3Dhipstercom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0131103628</MoreOffersUrl>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+          <OfferListing>
+            <OfferListingId>%2FjcPA74OOXTYKMu9Mb7Nvo7AG3y7ebsCLRjpo%2FDHBlXo2G7bdNBljgcBp2NuUpaGCYFaLCodkoKw8JqUWw23U7RAZFa9uhkQqEL4Hpy2iLU%3D</OfferListingId>
+            <Price>
+              <Amount>4846</Amount>
+              <CurrencyCode>USD</CurrencyCode>
+              <FormattedPrice>$48.46</FormattedPrice>
+            </Price>
+            <AmountSaved>
+              <Amount>1854</Amount>
+              <CurrencyCode>USD</CurrencyCode>
+              <FormattedPrice>$18.54</FormattedPrice>
+            </AmountSaved>
+            <PercentageSaved>28</PercentageSaved>
+            <Availability>Usually ships in 24 hours</Availability>
+            <AvailabilityAttributes>
+              <AvailabilityType>now</AvailabilityType>
+              <MinimumHours>0</MinimumHours>
+              <MaximumHours>0</MaximumHours>
+            </AvailabilityAttributes>
+            <IsEligibleForSuperSaverShipping>1</IsEligibleForSuperSaverShipping>
+          </OfferListing>
+        </Offer>
+      </Offers>
+      <CustomerReviews>
+        <IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAIZ4K6CQUSMXHVYUQ&amp;alinkCode=xm2&amp;asin=0131103628&amp;atag=hipstercom-20&amp;exp=2012-09-21T04%3A04%3A02Z&amp;v=2&amp;sig=k6576mixi35VmQipJW6NZzLSY%2B3JGOe88rIHy1MYHYk%3D</IFrameURL>
+        <HasReviews>true</HasReviews>
+      </CustomerReviews>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Product Description</Source>
+          <Content>&lt;P&gt;The authors present the complete guide to ANSI standard C language programming. Written by the developers of C, this new version helps readers keep up with the finalized ANSI standard for C while showing how to take advantage of C's rich set of operators, economy of expression, improved control flow, and data structures. The 2/E has been completely rewritten with additional examples and problem sets to clarify the implementation of difficult language constructs. For years, C programmers have let K&amp;R guide them to building well-structured and efficient programs. Now this same help is available to those working with ANSI compilers. Includes detailed coverage of the C language plus the official C language reference manual for at-a-glance help with syntax notation, declarations, ANSI changes, scope rules, and the list goes on and on.  &lt;/P&gt;</Content>
+          <IsLinkSuppressed>0</IsLinkSuppressed>
+        </EditorialReview>
+        <EditorialReview>
+          <Source>Amazon.com Review</Source>
+          <Content>Just about every C programmer I respect learned C from this  book. Unlike many of the 1,000 page doorstops stuffed with CD-ROMs  that have become popular, this volume is concise and powerful (if  somewhat dangerous) -- like C itself. And it was written by Kernighan  himself. Need we say more?</Content>
+          <IsLinkSuppressed>0</IsLinkSuppressed>
+        </EditorialReview>
+      </EditorialReviews>
+      <SimilarProducts>
+        <SimilarProduct>
+          <ASIN>0131096532</ASIN>
+          <Title>The C Answer Book: Solutions to the Exercises in 'The C Programming Language,' Second Edition</Title>
+        </SimilarProduct>
+        <SimilarProduct>
+          <ASIN>0136108040</ASIN>
+          <Title>Computer Systems: A Programmer's Perspective (2nd Edition)</Title>
+        </SimilarProduct>
+        <SimilarProduct>
+          <ASIN>0123747503</ASIN>
+          <Title>Computer Organization and Design, Revised Fourth Edition, Fourth Edition: The Hardware/Software Interface (The Morgan Kaufmann Series in Computer Architecture and Design)</Title>
+        </SimilarProduct>
+        <SimilarProduct>
+          <ASIN>0750682760</ASIN>
+          <Title>MSP430 Microcontroller Basics</Title>
+        </SimilarProduct>
+        <SimilarProduct>
+          <ASIN>0735611319</ASIN>
+          <Title>Code: The Hidden Language of Computer Hardware and Software</Title>
+        </SimilarProduct>
+      </SimilarProducts>
+      <Accessories>
+        <Accessory>
+          <ASIN>B00002SFL3</ASIN>
+          <Title>microsoft visual c 6.0"</Title>
+        </Accessory>
+        <Accessory>
+          <ASIN>032163537X</ASIN>
+          <Title>Elements of Programming</Title>
+        </Accessory>
+        <Accessory>
+          <ASIN>0201700735</ASIN>
+          <Title>The C++ Programming Language: Special Edition</Title>
+        </Accessory>
+        <Accessory>
+          <ASIN>0672326663</ASIN>
+          <Title>Programming in C (3rd Edition)</Title>
+        </Accessory>
+      </Accessories>
+      <BrowseNodes>
+        <BrowseNode>
+          <BrowseNodeId>3952</BrowseNodeId>
+          <Name>Languages &amp; Tools</Name>
+          <Children>
+            <BrowseNode>
+              <BrowseNodeId>379359011</BrowseNodeId>
+              <Name>Ajax</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3954</BrowseNodeId>
+              <Name>Assembly Language Programming</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3955</BrowseNodeId>
+              <Name>Borland Delphi</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>697342</BrowseNodeId>
+              <Name>C#</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>379357011</BrowseNodeId>
+              <Name>CSS</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3970</BrowseNodeId>
+              <Name>Compiler Design</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3971</BrowseNodeId>
+              <Name>Compilers</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3977</BrowseNodeId>
+              <Name>Fortran</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3981</BrowseNodeId>
+              <Name>Lisp</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3987</BrowseNodeId>
+              <Name>Prolog</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>285856</BrowseNodeId>
+              <Name>Python</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>3996</BrowseNodeId>
+              <Name>Visual Basic</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>285859</BrowseNodeId>
+              <Name>XHTML</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>4052</BrowseNodeId>
+              <Name>XML</Name>
+            </BrowseNode>
+          </Children>
+          <Ancestors>
+            <BrowseNode>
+              <BrowseNodeId>3839</BrowseNodeId>
+              <Name>Programming</Name>
+              <Ancestors>
+                <BrowseNode>
+                  <BrowseNodeId>5</BrowseNodeId>
+                  <Name>Computers &amp; Technology</Name>
+                  <Ancestors>
+                    <BrowseNode>
+                      <BrowseNodeId>1000</BrowseNodeId>
+                      <Name>Subjects</Name>
+                      <IsCategoryRoot>1</IsCategoryRoot>
+                      <Ancestors>
+                        <BrowseNode>
+                          <BrowseNodeId>283155</BrowseNodeId>
+                          <Name>Books</Name>
+                        </BrowseNode>
+                      </Ancestors>
+                    </BrowseNode>
+                  </Ancestors>
+                </BrowseNode>
+              </Ancestors>
+            </BrowseNode>
+          </Ancestors>
+        </BrowseNode>
+        <BrowseNode>
+          <BrowseNodeId>3961</BrowseNodeId>
+          <Name>Language</Name>
+          <Ancestors>
+            <BrowseNode>
+              <BrowseNodeId>3956</BrowseNodeId>
+              <Name>C</Name>
+              <Ancestors>
+                <BrowseNode>
+                  <BrowseNodeId>3839</BrowseNodeId>
+                  <Name>Programming</Name>
+                  <Ancestors>
+                    <BrowseNode>
+                      <BrowseNodeId>5</BrowseNodeId>
+                      <Name>Computers &amp; Technology</Name>
+                      <Ancestors>
+                        <BrowseNode>
+                          <BrowseNodeId>1000</BrowseNodeId>
+                          <Name>Subjects</Name>
+                          <IsCategoryRoot>1</IsCategoryRoot>
+                          <Ancestors>
+                            <BrowseNode>
+                              <BrowseNodeId>283155</BrowseNodeId>
+                              <Name>Books</Name>
+                            </BrowseNode>
+                          </Ancestors>
+                        </BrowseNode>
+                      </Ancestors>
+                    </BrowseNode>
+                  </Ancestors>
+                </BrowseNode>
+              </Ancestors>
+            </BrowseNode>
+          </Ancestors>
+        </BrowseNode>
+        <BrowseNode>
+          <BrowseNodeId>4053</BrowseNodeId>
+          <Name>Software</Name>
+          <Ancestors>
+            <BrowseNode>
+              <BrowseNodeId>5</BrowseNodeId>
+              <Name>Computers &amp; Technology</Name>
+              <Ancestors>
+                <BrowseNode>
+                  <BrowseNodeId>1000</BrowseNodeId>
+                  <Name>Subjects</Name>
+                  <IsCategoryRoot>1</IsCategoryRoot>
+                  <Ancestors>
+                    <BrowseNode>
+                      <BrowseNodeId>283155</BrowseNodeId>
+                      <Name>Books</Name>
+                    </BrowseNode>
+                  </Ancestors>
+                </BrowseNode>
+              </Ancestors>
+            </BrowseNode>
+          </Ancestors>
+        </BrowseNode>
+        <BrowseNode>
+          <BrowseNodeId>21</BrowseNodeId>
+          <Name>Education &amp; Reference</Name>
+          <Children>
+            <BrowseNode>
+              <BrowseNodeId>11444</BrowseNodeId>
+              <Name>Almanacs &amp; Yearbooks</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11448</BrowseNodeId>
+              <Name>Atlases &amp; Maps</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>2572</BrowseNodeId>
+              <Name>Careers</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11626</BrowseNodeId>
+              <Name>Catalogs &amp; Directories</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>69820</BrowseNodeId>
+              <Name>College &amp; University</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11472</BrowseNodeId>
+              <Name>Consumer Guides</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11475</BrowseNodeId>
+              <Name>Dictionaries &amp; Thesauruses</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11713</BrowseNodeId>
+              <Name>Encyclopedias</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11761</BrowseNodeId>
+              <Name>Etiquette</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11773</BrowseNodeId>
+              <Name>Foreign Language Study &amp; Reference</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11880</BrowseNodeId>
+              <Name>Genealogy</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>5267709011</BrowseNodeId>
+              <Name>Graduate School</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11902</BrowseNodeId>
+              <Name>Quotations</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>5267708011</BrowseNodeId>
+              <Name>Schools &amp; Teaching</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>5267723011</BrowseNodeId>
+              <Name>Studying &amp; Workbooks</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>5267710011</BrowseNodeId>
+              <Name>Test Preparation</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11871</BrowseNodeId>
+              <Name>Trivia &amp; Fun Facts</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>11970</BrowseNodeId>
+              <Name>Words, Language &amp; Grammar</Name>
+            </BrowseNode>
+            <BrowseNode>
+              <BrowseNodeId>5267707011</BrowseNodeId>
+              <Name>Writing, Research &amp; Publishing Guides</Name>
+            </BrowseNode>
+          </Children>
+          <Ancestors>
+            <BrowseNode>
+              <BrowseNodeId>1000</BrowseNodeId>
+              <Name>Subjects</Name>
+              <IsCategoryRoot>1</IsCategoryRoot>
+              <Ancestors>
+                <BrowseNode>
+                  <BrowseNodeId>283155</BrowseNodeId>
+                  <Name>Books</Name>
+                </BrowseNode>
+              </Ancestors>
+            </BrowseNode>
+          </Ancestors>
+        </BrowseNode>
+        <BrowseNode>
+          <BrowseNodeId>491314</BrowseNodeId>
+          <Name>Programming Languages</Name>
+          <Ancestors>
+            <BrowseNode>
+              <BrowseNodeId>468204</BrowseNodeId>
+              <Name>Computer Science</Name>
+              <Ancestors>
+                <BrowseNode>
+                  <BrowseNodeId>465600</BrowseNodeId>
+                  <Name>New, Used &amp; Rental Textbooks</Name>
+                  <Ancestors>
+                    <BrowseNode>
+                      <BrowseNodeId>2349030011</BrowseNodeId>
+                      <Name>Specialty Boutique</Name>
+                      <Ancestors>
+                        <BrowseNode>
+                          <BrowseNodeId>283155</BrowseNodeId>
+                          <Name>Books</Name>
+                        </BrowseNode>
+                      </Ancestors>
+                    </BrowseNode>
+                  </Ancestors>
+                </BrowseNode>
+              </Ancestors>
+            </BrowseNode>
+          </Ancestors>
+        </BrowseNode>
+      </BrowseNodes>
+    </Item>
+  </Items>
+</ItemLookupResponse>

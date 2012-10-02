@@ -54,6 +54,8 @@
     <Compile Include="Client\AwsProductApiClient.cs" />
     <Compile Include="AwsImageType.cs" />
     <Compile Include="Client\AwsProductApiOperation.cs" />
+    <Compile Include="Client\HttpCommunicator.cs" />
+    <Compile Include="Client\ICommunicator.cs" />
     <Compile Include="Client\NodePath.cs" />
     <Compile Include="Client\ProductApiConnectionInfo.cs" />
     <Compile Include="Client\SignedRequestHelper.cs" />

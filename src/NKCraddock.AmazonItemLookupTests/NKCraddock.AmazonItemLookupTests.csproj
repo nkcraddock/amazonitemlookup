@@ -44,12 +44,16 @@
   <ItemGroup>
     <Compile Include="Client\ProductApiTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelpers\AwsTestHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NKCraddock.AmazonItemLookup\NKCraddock.AmazonItemLookup.csproj">
       <Project>{7A32E179-873E-4611-88A7-A381019C1147}</Project>
       <Name>NKCraddock.AmazonItemLookup</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\ItemLookupResponse.Large.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NKCraddock.AmazonItemLookup;
 using NKCraddock.AmazonItemLookup.Client;
+using NKCraddock.AmazonItemLookupTests.TestHelpers;
 
 namespace NKCraddock.AmazonItemLookupTests.Client
 {
@@ -15,7 +16,7 @@ namespace NKCraddock.AmazonItemLookupTests.Client
 
         public ProductApiTest()
         {
-            api = new AwsProductApiClient(GetConnectionInfo());
+            api = new AwsProductApiClient(AwsTestHelper.GetConnectionInfo());
         }
 
         [TestMethod]
@@ -25,16 +26,6 @@ namespace NKCraddock.AmazonItemLookupTests.Client
 
             var item = api.LookupByAsin(ASIN);
             string imageUrl = item.GetImageUrl(AwsImageType.LargeImage);
-        }
-
-        private ProductApiConnectionInfo GetConnectionInfo()
-        {
-            return new ProductApiConnectionInfo
-            {
-                AWSAccessKey = "Sorry you'll have to ",
-                AWSSecretKey = "put your own aws information",
-                AWSAssociateTag = "in here if you want to run the tests."
-            };
         }
     }
 }
