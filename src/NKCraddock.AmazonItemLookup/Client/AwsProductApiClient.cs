@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using NKCraddock.AmazonItemLookup.Client.Operations;
 
 namespace NKCraddock.AmazonItemLookup.Client
 {
@@ -20,30 +22,44 @@ namespace NKCraddock.AmazonItemLookup.Client
             this.communicator = communicator;
         }
 
-        public AwsItem ItemLookupByAsin(string asin)
+        public T Get<T>(IAwsOperation<T> operation)
         {
-            var requestArgs = GetRequestArgumentsForOperation(AwsProductApiOperation.ItemLookup);
-            requestArgs["ItemId"] = asin;
+            var requestArgs = GetRequestArguments(operation.GetRequestArguments());
 
             string requestUrl = SignRequest(requestArgs);
 
             string responseText = communicator.GetResponseFromUrl(requestUrl);
 
-            var itemLookupResponse = new AwsItemLookupResponse(responseText);
-
-            return itemLookupResponse.ToAwsItem();
+            return operation.GetResultsFromXml(responseText);
         }
 
-        private Dictionary<string, string> GetRequestArgumentsForOperation(AwsProductApiOperation operation)
+        public AwsItem ItemLookupByAsin(string asin)
         {
-            var requestArgs = new Dictionary<string, String>();
+            var operation = new ItemLookupOperation(asin);
+            return Get<AwsItem>(operation);
+        }
+
+        private Dictionary<string, string> GetRequestArguments(Dictionary<string, string> operationArguments)
+        {
+            var requestArgs = new Dictionary<string, string>();
             requestArgs["Service"] = AWS_SERVICE;
             requestArgs["Version"] = AWS_VERSION;
-            requestArgs["Operation"] = operation.ToString();
-            requestArgs["ResponseGroup"] = "Large";
             requestArgs["AssociateTag"] = connectionInfo.AWSAssociateTag;
+            foreach (string key in operationArguments.Keys)
+                requestArgs[key] = operationArguments[key];
             return requestArgs;
         }
+
+        //private Dictionary<string, string> GetRequestArgumentsForOperation(AwsProductApiOperation operation)
+        //{
+        //    var requestArgs = new Dictionary<string, string>();
+        //    requestArgs["Service"] = AWS_SERVICE;
+        //    requestArgs["Version"] = AWS_VERSION;
+        //    requestArgs["Operation"] = operation.ToString();
+        //    requestArgs["ResponseGroup"] = "Large";
+        //    requestArgs["AssociateTag"] = connectionInfo.AWSAssociateTag;
+        //    return requestArgs;
+        //}
 
         protected virtual string SignRequest(Dictionary<string, String> requestArgs)
         {

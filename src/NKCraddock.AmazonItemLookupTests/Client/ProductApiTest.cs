@@ -32,10 +32,9 @@ namespace NKCraddock.AmazonItemLookupTests.Client
             const string LARGE_IMAGE_URL = "http://ecx.images-amazon.com/images/I/41G0l2eBPNL.jpg";
 
             WithItemLookupResponseLarge();
-
             var item = api.ItemLookupByAsin(ASIN);
-            Assert.IsNotNull(item);
 
+            Assert.IsNotNull(item);
             Assert.AreEqual<string>(ASIN, item.ASIN);
             Assert.AreEqual<string>(ISBN, item.ItemAttributes["ISBN"]);
             Assert.AreEqual<double>(LIST_PRICE, item.ListPrice.Value);
