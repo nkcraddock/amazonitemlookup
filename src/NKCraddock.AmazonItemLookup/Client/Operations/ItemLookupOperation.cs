@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using NKCraddock.AmazonItemLookup.Client.Responses;
 
 namespace NKCraddock.AmazonItemLookup.Client.Operations
 {
@@ -23,7 +24,7 @@ namespace NKCraddock.AmazonItemLookup.Client.Operations
 
         public AwsItem GetResultsFromXml(string xml)
         {
-            var itemLookupResponse = new AwsItemLookupResponse(xml);
+            var itemLookupResponse = new ItemLookupResponse(xml);
             return itemLookupResponse.ToAwsItem();
         }
     }

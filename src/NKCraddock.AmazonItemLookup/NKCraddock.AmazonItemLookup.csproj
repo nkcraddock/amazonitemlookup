@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwsCart.cs" />
     <Compile Include="AwsImage.cs" />
     <Compile Include="AwsImageSet.cs" />
     <Compile Include="AwsImageSetCategory.cs" />
@@ -50,11 +51,14 @@
     <Compile Include="AwsOffer.cs" />
     <Compile Include="AwsReview.cs" />
     <Compile Include="AwsSimilarProduct.cs" />
-    <Compile Include="Client\AwsItemLookupResponse.cs" />
+    <Compile Include="CartItem.cs" />
+    <Compile Include="Client\AwsXmlParser.cs" />
+    <Compile Include="Client\Responses\CartCreateResponse.cs" />
+    <Compile Include="Client\Responses\ItemLookupResponse.cs" />
     <Compile Include="Client\AwsProductApiClient.cs" />
     <Compile Include="AwsImageType.cs" />
-    <Compile Include="Client\AwsProductApiOperation.cs" />
     <Compile Include="Client\HttpCommunicator.cs" />
+    <Compile Include="Client\Operations\CartCreateOperation.cs" />
     <Compile Include="Client\Operations\IAwsOperation.cs" />
     <Compile Include="Client\ICommunicator.cs" />
     <Compile Include="Client\NodePath.cs" />

@@ -2,6 +2,8 @@
 using Moq;
 using NKCraddock.AmazonItemLookup;
 using NKCraddock.AmazonItemLookup.Client;
+using NKCraddock.AmazonItemLookup.Client.Operations;
+using NKCraddock.AmazonItemLookup.Client.Responses;
 using NKCraddock.AmazonItemLookupTests.TestHelpers;
 
 namespace NKCraddock.AmazonItemLookupTests.Client
@@ -17,7 +19,9 @@ namespace NKCraddock.AmazonItemLookupTests.Client
         public void Initialize()
         {
             communicatorMock = new Mock<ICommunicator>();
-            api = new AwsProductApiClient(new AwsTestConnectionInfo(), communicatorMock.Object);
+            api = new AwsProductApiClient(new AwsTestConnectionInfo());
+
+            //api = new AwsProductApiClient(new AwsTestConnectionInfo(), communicatorMock.Object);
         }
 
         [TestMethod]
@@ -35,6 +39,14 @@ namespace NKCraddock.AmazonItemLookupTests.Client
             Assert.AreEqual<string>(ISBN, item.ItemAttributes["ISBN"]);
             Assert.AreEqual<double>(LIST_PRICE, item.ListPrice.Value);
             Assert.AreEqual<string>(LARGE_IMAGE_URL, item.PrimaryImageSet[AwsImageType.LargeImage].URL);
+        }
+
+        [TestMethod]
+        public void MyTestMethod()
+        {
+            CartItem[] items = { new CartItem { Asin = ASIN } };
+
+            var cart = api.Get<CartCreateResponse>(new CartCreateOperation(items));
         }
 
         private void WithItemLookupResponseLarge()
