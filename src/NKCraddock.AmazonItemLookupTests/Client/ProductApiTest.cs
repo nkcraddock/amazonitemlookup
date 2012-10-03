@@ -43,10 +43,11 @@ namespace NKCraddock.AmazonItemLookupTests.Client
         public void MyTestMethod()
         {
             WithCartCreateResponse();
-            CartItem[] items = { new CartItem { Asin = ASIN } };
 
-            var cart = api.Get<AwsCart>(new CartCreateOperation(items));
+            var cart = api.CreateCart(new CartItem { Asin = ASIN });
+
             Assert.IsNotNull(cart);
+            Assert.AreEqual<int>(1, cart.CartItems.Count);
         }
 
         private void WithItemLookupResponseLarge()

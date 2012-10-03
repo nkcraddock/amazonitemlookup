@@ -31,6 +31,11 @@ namespace NKCraddock.AmazonItemLookup.Client
             return Get<AwsItem>(operation);
         }
 
+        public AwsCart CreateCart(params CartItem[] items)
+        {
+            return Get<AwsCart>(new CartCreateOperation(items));
+        }
+
         private Dictionary<string, string> GetRequestArguments(Dictionary<string, string> operationArguments)
         {
             var requestArgs = new Dictionary<string, string>();
