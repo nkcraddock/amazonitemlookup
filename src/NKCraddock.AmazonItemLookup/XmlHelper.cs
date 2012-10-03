@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Linq;
+using System.Xml;
 
 namespace NKCraddock.AmazonItemLookup
 {
@@ -36,6 +37,11 @@ namespace NKCraddock.AmazonItemLookup
         public static string GetValue(XmlNode node)
         {
             return node == null ? null : (node.Value ?? node.InnerText);
+        }
+
+        public static XmlNode GetChildNode(XmlNode node, string nodeName)
+        {
+            return node.ChildNodes.Cast<XmlNode>().Where(x => x.Name == nodeName).FirstOrDefault();
         }
     }
 }

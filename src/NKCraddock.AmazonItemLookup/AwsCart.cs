@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace NKCraddock.AmazonItemLookup
 {
     public class AwsCart
     {
-        string CartId { get; set; }
+        public string CartId { get; set; }
         public string HMAC { get; set; }
         public string URLEncodedHMAC { get; set; }
         public string PurchaseURL { get; set; }

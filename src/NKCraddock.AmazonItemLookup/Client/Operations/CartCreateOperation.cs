@@ -6,7 +6,7 @@ using NKCraddock.AmazonItemLookup.Client.Responses;
 
 namespace NKCraddock.AmazonItemLookup.Client.Operations
 {
-    public class CartCreateOperation : IAwsOperation<CartCreateResponse>
+    public class CartCreateOperation : IAwsOperation<AwsCart>
     {
         CartItem[] cartItems;
 
@@ -33,9 +33,9 @@ namespace NKCraddock.AmazonItemLookup.Client.Operations
             return requestArgs;
         }
 
-        public CartCreateResponse GetResultsFromXml(string xml)
+        public AwsCart GetResultsFromXml(string xml)
         {
-            return new CartCreateResponse(xml);
+            return new CartCreateResponse(xml).ToCart();
         }
     }
 }

@@ -11,6 +11,11 @@ namespace NKCraddock.AmazonItemLookupTests.TestHelpers
             return GetTestData("ItemLookupResponse.Large.xml");
         }
 
+        public static string GetCartCreate()
+        {
+            return GetTestData("CartCreateResponse.xml");
+        }
+
         private static string GetTestData(string resourceFilename)
         {
             try

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CartCreateResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header>
+    </HTTPHeaders>
+    <RequestId>DOESNTMATTER</RequestId>
+    <Arguments>
+      <Argument Name="Service" Value="AWSECommerceService"></Argument>
+      <Argument Name="Item.1.Quantity" Value="1"></Argument>
+      <Argument Name="Operation" Value="CartCreate"></Argument>
+      <Argument Name="Timestamp" Value="2012-10-03T01:44:56Z"></Argument>
+      <Argument Name="Version" Value="2009-03-31"></Argument>
+      <Argument Name="AssociateTag" Value="DOESNTMATTER"></Argument>
+      <Argument Name="Item.1.ASIN" Value="0131103628"></Argument>
+      <Argument Name="Signature" Value="DOESNTMATTER/mvwy3ng="></Argument>
+      <Argument Name="AWSAccessKeyId" Value="DOESNTMATTER"></Argument>
+    </Arguments>
+    <RequestProcessingTime>0.15775203704834</RequestProcessingTime>
+  </OperationRequest>
+  <Cart>
+    <Request>
+      <IsValid>True</IsValid>
+      <CartCreateRequest>
+        <Items>
+          <Item>
+            <ASIN>0131103628</ASIN>
+            <Quantity>1</Quantity>
+          </Item>
+        </Items>
+      </CartCreateRequest>
+    </Request>
+    <CartId>189-9471282-0236762</CartId>
+    <HMAC>HMEEZY</HMAC>
+    <URLEncodedHMAC>HMEEZY%20</URLEncodedHMAC>
+    <PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?DOESNTMATTER</PurchaseURL>
+    <SubTotal>
+      <Amount>4899</Amount>
+      <CurrencyCode>USD</CurrencyCode>
+      <FormattedPrice>$48.99</FormattedPrice>
+    </SubTotal>
+    <CartItems>
+      <SubTotal>
+        <Amount>4899</Amount>
+        <CurrencyCode>USD</CurrencyCode>
+        <FormattedPrice>$48.99</FormattedPrice>
+      </SubTotal>
+      <CartItem>
+        <CartItemId>C2TOK0KPAO2JIT</CartItemId>
+        <ASIN>0131103628</ASIN>
+        <SellerNickname>Amazon.com</SellerNickname>
+        <Quantity>1</Quantity>
+        <Title>C Programming Language (2nd Edition)</Title>
+        <ProductGroup>Book</ProductGroup>
+        <Price>
+          <Amount>4899</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$48.99</FormattedPrice>
+        </Price>
+        <ItemTotal>
+          <Amount>4899</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$48.99</FormattedPrice>
+        </ItemTotal>
+      </CartItem>
+    </CartItems>
+  </Cart>
+</CartCreateResponse>

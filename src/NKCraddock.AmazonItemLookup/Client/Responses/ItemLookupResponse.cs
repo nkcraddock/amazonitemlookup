@@ -19,18 +19,18 @@ namespace NKCraddock.AmazonItemLookup.Client.Responses
         {
             var item = new AwsItem
             {
-                ASIN = parser.SelectNodeValue(NodePath.ASIN),
-                DetailPageURL = parser.SelectNodeValue(NodePath.DetailPageUrl),
-                SalesRank = XmlHelper.GetInt(parser.SelectNodeValue(NodePath.SalesRank)),
-                ReviewIFrameUrl = parser.SelectNodeValue(NodePath.ReviewIFrameUrl),
+                ASIN = parser.SelectNodeValue(NodePath.ItemLookupResponse.ASIN),
+                DetailPageURL = parser.SelectNodeValue(NodePath.ItemLookupResponse.DetailPageUrl),
+                SalesRank = XmlHelper.GetInt(parser.SelectNodeValue(NodePath.ItemLookupResponse.SalesRank)),
+                ReviewIFrameUrl = parser.SelectNodeValue(NodePath.ItemLookupResponse.ReviewIFrameUrl),
                 Links = GetLinks(),
                 ImageSets = GetImageSets(),
                 ItemAttributes = GetItemAttributes(),
                 Reviews = GetReviews(),
                 SimilarProducts = GetSimilarProducts(),
-                OfferPrice = XmlHelper.GetDollars(parser.SelectNode(NodePath.OfferPrice)),
-                ListPrice = XmlHelper.GetDollars(parser.SelectNode(NodePath.ListPrice)),
-                LowestOfferPrice = XmlHelper.GetDollars(parser.SelectNode(NodePath.LowestOfferPrice))
+                OfferPrice = XmlHelper.GetDollars(parser.SelectNode(NodePath.ItemLookupResponse.OfferPrice)),
+                ListPrice = XmlHelper.GetDollars(parser.SelectNode(NodePath.ItemLookupResponse.ListPrice)),
+                LowestOfferPrice = XmlHelper.GetDollars(parser.SelectNode(NodePath.ItemLookupResponse.LowestOfferPrice))
             };
 
             return item;
@@ -40,7 +40,7 @@ namespace NKCraddock.AmazonItemLookup.Client.Responses
         {
             var attr = new Dictionary<string, string>();
 
-            foreach (XmlNode node in parser.SelectNode(NodePath.ItemAttributes).ChildNodes)
+            foreach (XmlNode node in parser.SelectNode(NodePath.ItemLookupResponse.ItemAttributes).ChildNodes)
                 attr[node.Name] = XmlHelper.GetValue(node);
 
             return attr;
@@ -49,7 +49,7 @@ namespace NKCraddock.AmazonItemLookup.Client.Responses
         private IList<AwsReview> GetReviews()
         {
             var reviews = new List<AwsReview>();
-            foreach (XmlNode reviewNode in parser.SelectNodes(NodePath.Reviews))
+            foreach (XmlNode reviewNode in parser.SelectNodes(NodePath.ItemLookupResponse.Reviews))
                 reviews.Add(AwsReview.FromXmlNode(reviewNode));
             return reviews;
         }
@@ -57,7 +57,7 @@ namespace NKCraddock.AmazonItemLookup.Client.Responses
         private IList<AwsSimilarProduct> GetSimilarProducts()
         {
             var similarProducts = new List<AwsSimilarProduct>();
-            foreach (XmlNode node in parser.SelectNodes(NodePath.SimilarProducts))
+            foreach (XmlNode node in parser.SelectNodes(NodePath.ItemLookupResponse.SimilarProducts))
                 similarProducts.Add(AwsSimilarProduct.FromXmlNode(node));
             return similarProducts;
         }
@@ -65,7 +65,7 @@ namespace NKCraddock.AmazonItemLookup.Client.Responses
         private IList<AwsImageSet> GetImageSets()
         {
             var imageSets = new List<AwsImageSet>();
-            foreach (XmlNode imageSetNode in parser.SelectNodes(NodePath.ImageSets))
+            foreach (XmlNode imageSetNode in parser.SelectNodes(NodePath.ItemLookupResponse.ImageSets))
                 imageSets.Add(AwsImageSet.FromXmlNode(imageSetNode));
             return imageSets;
         }
@@ -73,7 +73,7 @@ namespace NKCraddock.AmazonItemLookup.Client.Responses
         private IList<AwsLink> GetLinks()
         {
             var links = new List<AwsLink>();
-            foreach (XmlNode linkNode in parser.SelectNodes(NodePath.ItemLinks))
+            foreach (XmlNode linkNode in parser.SelectNodes(NodePath.ItemLookupResponse.ItemLinks))
                 links.Add(AwsLink.FromXmlNode(linkNode));
             return links;
         }

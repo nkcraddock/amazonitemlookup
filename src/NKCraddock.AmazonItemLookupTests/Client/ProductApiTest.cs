@@ -19,9 +19,7 @@ namespace NKCraddock.AmazonItemLookupTests.Client
         public void Initialize()
         {
             communicatorMock = new Mock<ICommunicator>();
-            api = new AwsProductApiClient(new AwsTestConnectionInfo());
-
-            //api = new AwsProductApiClient(new AwsTestConnectionInfo(), communicatorMock.Object);
+            api = new AwsProductApiClient(new AwsTestConnectionInfo(), communicatorMock.Object);
         }
 
         [TestMethod]
@@ -44,14 +42,22 @@ namespace NKCraddock.AmazonItemLookupTests.Client
         [TestMethod]
         public void MyTestMethod()
         {
+            WithCartCreateResponse();
             CartItem[] items = { new CartItem { Asin = ASIN } };
 
-            var cart = api.Get<CartCreateResponse>(new CartCreateOperation(items));
+            var cart = api.Get<AwsCart>(new CartCreateOperation(items));
+            Assert.IsNotNull(cart);
         }
 
         private void WithItemLookupResponseLarge()
         {
             string responseText = AwsTestHelper.GetItemLookupResponseLarge();
+            communicatorMock.Setup(x => x.GetResponseFromUrl(It.IsAny<string>())).Returns(responseText);
+        }
+
+        private void WithCartCreateResponse()
+        {
+            string responseText = AwsTestHelper.GetCartCreate();
             communicatorMock.Setup(x => x.GetResponseFromUrl(It.IsAny<string>())).Returns(responseText);
         }
     }
