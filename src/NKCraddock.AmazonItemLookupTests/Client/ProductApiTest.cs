@@ -15,33 +15,34 @@ namespace NKCraddock.AmazonItemLookupTests.Client
     {
         AwsProductApiClient api;
         Mock<ICommunicator> communicatorMock;
+        const string ASIN = "0131103628";
 
-        public ProductApiTest()
+        [TestInitialize]
+        public void Initialize()
         {
             communicatorMock = new Mock<ICommunicator>();
             api = new AwsProductApiClient(new AwsTestConnectionInfo(), communicatorMock.Object);
         }
 
         [TestMethod]
-        public void CanLookupKnr()
+        public void ItemLookup_WithLargeResponse_RetrievesAFewPropertiesIWillSelectHaphazardly()
         {
-            WithItemLookupRequestLarge();
-            const string ASIN = "0131103628";
+            const string ISBN = "0131103628";
+            const double LIST_PRICE = 67;
+            const string LARGE_IMAGE_URL = "http://ecx.images-amazon.com/images/I/41G0l2eBPNL.jpg";
 
-            var item = api.LookupByAsin(ASIN);
-            string imageUrl = item.GetImageUrl(AwsImageType.LargeImage);
+            WithItemLookupResponseLarge();
+
+            var item = api.ItemLookupByAsin(ASIN);
             Assert.IsNotNull(item);
+
             Assert.AreEqual<string>(ASIN, item.ASIN);
+            Assert.AreEqual<string>(ISBN, item.ItemAttributes["ISBN"]);
+            Assert.AreEqual<double>(LIST_PRICE, item.ListPrice.Value);
+            Assert.AreEqual<string>(LARGE_IMAGE_URL, item.PrimaryImageSet[AwsImageType.LargeImage].URL);
         }
 
-        [TestMethod]
-        public void MyTestMethod()
-        {
-            WithItemLookupRequestLarge();
-            string haha = AwsTestHelper.GetItemLookupResponseLarge();
-        }
-
-        private void WithItemLookupRequestLarge()
+        private void WithItemLookupResponseLarge()
         {
             string responseText = AwsTestHelper.GetItemLookupResponseLarge();
             communicatorMock.Setup(x => x.GetResponseFromUrl(It.IsAny<string>())).Returns(responseText);

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace NKCraddock.AmazonItemLookup.Client
 {
@@ -26,12 +20,12 @@ namespace NKCraddock.AmazonItemLookup.Client
             this.communicator = communicator;
         }
 
-        public AwsItem LookupByAsin(string asin)
+        public AwsItem ItemLookupByAsin(string asin)
         {
-            var args = GetRequestArguments(AwsProductApiOperation.ItemLookup);
-            args["ItemId"] = asin;
+            var requestArgs = GetRequestArgumentsForOperation(AwsProductApiOperation.ItemLookup);
+            requestArgs["ItemId"] = asin;
 
-            string requestUrl = SignRequest(args);
+            string requestUrl = SignRequest(requestArgs);
 
             string responseText = communicator.GetResponseFromUrl(requestUrl);
 
@@ -40,12 +34,12 @@ namespace NKCraddock.AmazonItemLookup.Client
             return itemLookupResponse.ToAwsItem();
         }
 
-        private Dictionary<string, string> GetRequestArguments(string operation)
+        private Dictionary<string, string> GetRequestArgumentsForOperation(AwsProductApiOperation operation)
         {
             var requestArgs = new Dictionary<string, String>();
             requestArgs["Service"] = AWS_SERVICE;
             requestArgs["Version"] = AWS_VERSION;
-            requestArgs["Operation"] = operation;
+            requestArgs["Operation"] = operation.ToString();
             requestArgs["ResponseGroup"] = "Large";
             requestArgs["AssociateTag"] = connectionInfo.AWSAssociateTag;
             return requestArgs;
