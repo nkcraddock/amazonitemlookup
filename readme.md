@@ -1,10 +1,9 @@
 #AmazonItemLookup: Easy item lookup by ASIN from Amazon Product Advertising API
 by [Nathan Craddock](http://nathan.craddock.org/ "Nathan Craddock - Software Developer")
 
-It just does the bare minimum I need at the moment. I'll expand it and if anyone 
-else actually uses it and wants something implemented, I'll probably do it.
 
-##Example:
+
+##Set up a connection
 		AwsProductApi api = new AwsProductApi(new ProductApiConnectionInfo
 		{
 			AWSAccessKey = config.AWSAccessKey,
@@ -12,9 +11,11 @@ else actually uses it and wants something implemented, I'll probably do it.
 			AWSAssociateTag = config.AWSAssociateTag
 		});
 
+##Retrieve an item from Amazon by ASIN
+
 		AwsItem item = api.LookupByAsin(ASIN);
 
-The AwsItem class has:
+##The AwsItem class has:
 
 - ASIN
 - DetailPageURL
@@ -27,3 +28,12 @@ The AwsItem class has:
 - ListPrice, OfferPrice, LowestOfferPrice 
 - GetLowestPrice()
 - GetImageUrl(Type)
+
+##Create a cart on Amazon with 2 items in it and transfer the user to the purchase URL
+		
+		AwsCart cart = api.CreateCart(new CartItem { Asin = "B0071YIFJ6" }, new CartItem { Asin = "B001H1SVO8" });
+
+
+* * *
+
+*   Added support for CreateCart
