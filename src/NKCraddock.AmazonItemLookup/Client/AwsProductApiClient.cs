@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using NKCraddock.AmazonItemLookup.Client.Operations;
 
 namespace NKCraddock.AmazonItemLookup.Client
 {
     public class AwsProductApiClient
     {
-        const string AWS_SERVICE = "AWSECommerceService";
-        const string AWS_VERSION = "2009-03-31";
-        const string AWS_DESTINATION = "ecs.amazonaws.com";
-
         ProductApiConnectionInfo connectionInfo;
         ICommunicator communicator;
 
@@ -25,12 +20,9 @@ namespace NKCraddock.AmazonItemLookup.Client
         public T Get<T>(IAwsOperation<T> operation)
         {
             var requestArgs = GetRequestArguments(operation.GetRequestArguments());
-
             string requestUrl = SignRequest(requestArgs);
-
-            string responseText = communicator.GetResponseFromUrl(requestUrl);
-
-            return operation.GetResultsFromXml(responseText);
+            string responseXml = communicator.GetResponseFromUrl(requestUrl);
+            return operation.GetResultsFromXml(responseXml);
         }
 
         public AwsItem ItemLookupByAsin(string asin)
@@ -42,27 +34,17 @@ namespace NKCraddock.AmazonItemLookup.Client
         private Dictionary<string, string> GetRequestArguments(Dictionary<string, string> operationArguments)
         {
             var requestArgs = new Dictionary<string, string>();
-            requestArgs["Service"] = AWS_SERVICE;
-            requestArgs["Version"] = AWS_VERSION;
+            requestArgs["Service"] = "AWSECommerceService";
+            requestArgs["Version"] = "2009-03-31";
             requestArgs["AssociateTag"] = connectionInfo.AWSAssociateTag;
             foreach (string key in operationArguments.Keys)
                 requestArgs[key] = operationArguments[key];
             return requestArgs;
         }
 
-        //private Dictionary<string, string> GetRequestArgumentsForOperation(AwsProductApiOperation operation)
-        //{
-        //    var requestArgs = new Dictionary<string, string>();
-        //    requestArgs["Service"] = AWS_SERVICE;
-        //    requestArgs["Version"] = AWS_VERSION;
-        //    requestArgs["Operation"] = operation.ToString();
-        //    requestArgs["ResponseGroup"] = "Large";
-        //    requestArgs["AssociateTag"] = connectionInfo.AWSAssociateTag;
-        //    return requestArgs;
-        //}
-
         protected virtual string SignRequest(Dictionary<string, String> requestArgs)
         {
+            const string AWS_DESTINATION = "ecs.amazonaws.com";
             var signer = new SignedRequestHelper(connectionInfo.AWSAccessKey, connectionInfo.AWSSecretKey, AWS_DESTINATION);
             return signer.Sign(requestArgs);
         }

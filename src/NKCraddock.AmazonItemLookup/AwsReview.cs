@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace NKCraddock.AmazonItemLookup
@@ -9,7 +6,6 @@ namespace NKCraddock.AmazonItemLookup
     public class AwsReview
     {
         public string Source { get; set; }
-
         public string Content { get; set; }
 
         internal static AwsReview FromXmlNode(XmlNode node)

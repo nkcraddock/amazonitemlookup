@@ -6,7 +6,6 @@ namespace NKCraddock.AmazonItemLookup
     public class AwsSimilarProduct
     {
         public string ASIN { get; set; }
-
         public string Title { get; set; }
 
         internal static AwsSimilarProduct FromXmlNode(XmlNode node)

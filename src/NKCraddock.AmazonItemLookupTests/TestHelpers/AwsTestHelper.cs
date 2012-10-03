@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using NKCraddock.AmazonItemLookup.Client;
 
 namespace NKCraddock.AmazonItemLookupTests.TestHelpers
 {

@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml;
 
 namespace NKCraddock.AmazonItemLookup
 {
     public class AwsItem
     {
         public string ASIN { get; set; }
-
         public string DetailPageURL { get; set; }
-
         public IList<AwsLink> Links { get; set; }
-
         public int? SalesRank { get; set; }
+        public IList<AwsImageSet> ImageSets { get; set; }
+        public IDictionary<string, string> ItemAttributes { get; set; }
+        public string ReviewIFrameUrl { get; set; }
+        public IList<AwsReview> Reviews { get; set; }
+        public IList<AwsSimilarProduct> SimilarProducts { get; set; }
+        public double? ListPrice { get; set; }
+        public double? OfferPrice { get; set; }
+        public double? LowestOfferPrice { get; set; }
 
         public AwsImageSet PrimaryImageSet
         {
@@ -22,12 +26,6 @@ namespace NKCraddock.AmazonItemLookup
                 return ImageSets.Where(x => x.Category == AwsImageSetCategory.Primary).FirstOrDefault();
             }
         }
-
-        public IList<AwsImageSet> ImageSets { get; set; }
-
-        public IDictionary<string, string> ItemAttributes { get; set; }
-
-        public string ReviewIFrameUrl { get; set; }
 
         public string Description
         {
@@ -40,16 +38,6 @@ namespace NKCraddock.AmazonItemLookup
                 return description.Content;
             }
         }
-
-        public IList<AwsReview> Reviews { get; set; }
-
-        public IList<AwsSimilarProduct> SimilarProducts { get; set; }
-
-        public double? ListPrice { get; set; }
-
-        public double? OfferPrice { get; set; }
-
-        public double? LowestOfferPrice { get; set; }
 
         public double? GetLowestPrice()
         {
