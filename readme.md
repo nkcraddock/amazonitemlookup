@@ -1,4 +1,6 @@
-#AmazonItemLookup: Easy item lookup by ASIN from Amazon Product Advertising API
+#AmazonItemLookup
+
+##Easy item lookup by ASIN from Amazon Product Advertising API
 
 by [Nathan Craddock](http://nathancraddock.org/ "Nathan Craddock - Software Developer")
 
