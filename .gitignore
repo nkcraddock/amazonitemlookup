@@ -36,3 +36,6 @@ _ReSharper*/
 *.[Pp]ublish.xml
 Uploads/
 App_Data/
+_CreateNewNuGetPackage/
+packages/
+New-NuGetPackages/

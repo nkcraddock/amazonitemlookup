@@ -49,8 +49,7 @@ namespace NKCraddock.AmazonItemLookup.Client
 
         protected virtual string SignRequest(Dictionary<string, String> requestArgs)
         {
-            const string AWS_DESTINATION = "ecs.amazonaws.com";
-            var signer = new SignedRequestHelper(connectionInfo.AWSAccessKey, connectionInfo.AWSSecretKey, AWS_DESTINATION);
+            var signer = new SignedRequestHelper(connectionInfo.AWSAccessKey, connectionInfo.AWSSecretKey, connectionInfo.AWSServerUri);
             return signer.Sign(requestArgs);
         }
     }
