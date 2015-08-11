@@ -5,12 +5,12 @@
 by [Nathan Craddock](http://nathancraddock.org/ "Nathan Craddock - Software Developer")
 
 ### Set up a connection
-		AwsProductApi api = new AwsProductApi(new ProductApiConnectionInfo
+		AwsProductApiClient api = new AwsProductApiClient(new ProductApiConnectionInfo
 		{
 			AWSAccessKey = config.AWSAccessKey,
 			AWSSecretKey = config.AWSSecretKey,
 			AWSAssociateTag = config.AWSAssociateTag,
-            [AWSServerUri = "webservices.amazon.co.uk"]
+			[AWSServerUri = "webservices.amazon.co.uk"]
 		});
 
 ### Retrieve an item from Amazon by ASIN
