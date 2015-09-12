@@ -10,12 +10,12 @@ Install-Package AmazonItemLookup
 ```
 ### Set up a connection
 ```
-		AwsProductApiClient api = new AwsProductApiClient(new ProductApiConnectionInfo
+AwsProductApiClient api = new AwsProductApiClient(new ProductApiConnectionInfo
 		{
 			AWSAccessKey = config.AWSAccessKey,
 			AWSSecretKey = config.AWSSecretKey,
 			AWSAssociateTag = config.AWSAssociateTag,
-            [AWSServerUri = "webservices.amazon.co.uk"]
+			[AWSServerUri = "webservices.amazon.co.uk"]
 		});
 ```
 ### Retrieve an item from Amazon by ASIN
